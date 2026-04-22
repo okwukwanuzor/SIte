@@ -1,0 +1,14 @@
+{
+  "name": "site-dashboards",
+  "version": "1.0.0",
+  "description": "Admin, Client, and Companion dashboards with Node.js backend and static frontend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

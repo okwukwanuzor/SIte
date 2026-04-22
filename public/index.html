@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin, Client & Companion Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Unified Dashboard Suite</h1>
+      <p>Admin, Client, and Companion experience in one app</p>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <button class="tab active" data-tab="admin">Admin</button>
+        <button class="tab" data-tab="client">Client</button>
+        <button class="tab" data-tab="companion">Companion</button>
+      </aside>
+
+      <section class="panel" id="admin-panel">
+        <h2>Admin Dashboard</h2>
+        <div class="cards" id="admin-metrics"></div>
+        <h3>Users</h3>
+        <div id="admin-users"></div>
+      </section>
+
+      <section class="panel hidden" id="client-panel">
+        <h2>Client Dashboard</h2>
+        <form id="new-ticket-form">
+          <label for="subject">Create support ticket</label>
+          <input id="subject" name="subject" placeholder="Describe your issue" required />
+          <button type="submit">Submit</button>
+        </form>
+        <div class="split">
+          <div>
+            <h3>Sessions</h3>
+            <ul id="client-sessions"></ul>
+          </div>
+          <div>
+            <h3>Tickets</h3>
+            <ul id="client-tickets"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel hidden" id="companion-panel">
+        <h2>Companion Dashboard</h2>
+        <div class="split">
+          <div>
+            <h3>Assigned Tickets</h3>
+            <ul id="companion-tickets"></ul>
+          </div>
+          <div>
+            <h3>Upcoming Sessions</h3>
+            <ul id="companion-sessions"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
